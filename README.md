@@ -1,6 +1,7 @@
 CareerPath – Your Guide, Your Future
 ​Making Career Planning Easier, Smarter, and More Accessible!
 ​CareerPath is a web-based platform designed to simplify the process of career exploration and skill development. It connects students and aspiring professionals with structured career roadmaps, curated learning resources, and mentorship opportunities through a simple and user-friendly interface.
+
 ​Our goal is to make career guidance more accessible while empowering individuals to make confident, informed decisions about their professional futures.
 ​Features
 ​User Authentication: Clean Login and Sign Up interface for personalized user profiles.
