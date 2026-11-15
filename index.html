@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Connect – Alumni Mentorship &amp; Career Guidance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap bar">
+    <a class="logo" href="#top">Campus<span>Connect</span></a>
+    <button id="menuBtn" class="btn ghost menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav id="links" aria-label="Main">
+      <a href="#mentors">Find a Mentor</a>
+      <a href="#how">How It Works</a>
+      <a href="#resources">Career Resources</a>
+      <a href="#events">Events</a>
+      <button class="btn ghost" data-demo="Login is simulated in this demo.">Login</button>
+      <button class="btn" data-demo="Join is simulated in this demo.">Join</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap two">
+      <div>
+        <h1>Get career guidance from alumni who were in your seat.</h1>
+        <p class="lead">Campus Connect pairs you with graduates who can review your resume, rehearse interviews and talk honestly about the path from campus to career.</p>
+        <p class="row"><a class="btn big" href="#mentors">Find your mentor</a><a class="btn ghost big" href="#resources">Explore careers</a></p>
+        <p class="proof"><strong>240+</strong> alumni mentors across 6 fields (sample figure)</p>
+      </div>
+      <aside id="spot" class="card spot" aria-label="Mentor spotlight"></aside>
+    </div>
+  </section>
+
+  <section id="mentors" class="wrap sec">
+    <h2>Find a mentor</h2>
+    <form id="filters" class="filters" role="search">
+      <label class="full">Search<input id="q" type="search" placeholder="Name, career, company, skill or topic"></label>
+      <label>Career field<select id="fField"></select></label>
+      <label>Guidance topic<select id="fTopic"></select></label>
+      <label>Meeting format<select id="fFormat"></select></label>
+      <label>Availability<select id="fAvail"></select></label>
+      <button type="reset" class="btn ghost">Clear filters</button>
+    </form>
+    <p id="count" class="muted" aria-live="polite"></p>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" hidden>
+      <h3>No mentors match those filters</h3>
+      <p>Try a broader search, or clear the filters to see everyone.</p>
+    </div>
+  </section>
+
+  <section id="how" class="band">
+    <div class="wrap sec">
+      <h2>How it works</h2>
+      <ol class="grid steps">
+        <li class="card"><h3>Browse alumni</h3><p>Search by career, skill or the topic you need help with.</p></li>
+        <li class="card"><h3>Request a session</h3><p>Pick a topic, format and time, then add a short note.</p></li>
+        <li class="card"><h3>Meet and grow</h3><p>Talk it through, rate the session and track your action items.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="dashboard" class="wrap sec">
+    <h2>Your dashboard</h2>
+    <p class="muted">A preview of what students see after joining. Data is saved only in this browser.</p>
+    <div class="grid dash">
+      <div class="card"><h3>Upcoming sessions</h3><ul id="sessions" class="list"></ul></div>
+      <div class="card"><h3>Saved mentors</h3><ul id="saved" class="list"></ul></div>
+      <div class="card">
+        <h3>Career goals &amp; action items</h3>
+        <p class="prog muted"></p>
+        <progress class="bar2" max="100" value="0" aria-label="Action item progress"></progress>
+        <ul id="goals" class="list"></ul>
+        <form id="goalForm" class="inline">
+          <label class="sr" for="goalIn">New action item</label>
+          <input id="goalIn" maxlength="80" placeholder="Add an action item" required>
+          <button class="btn">Add</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="band">
+    <div class="wrap sec">
+      <h2>Career resources</h2>
+      <form class="filters short" role="search" onsubmit="return false">
+        <label class="full">Search resources<input id="rq" type="search" placeholder="e.g. resume, interview"></label>
+        <label>Category<select id="rCat"></select></label>
+      </form>
+      <p id="rCount" class="muted" aria-live="polite"></p>
+      <div id="rGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <section id="events" class="wrap sec">
+    <h2>Events</h2>
+    <div id="eGrid" class="grid"></div>
+  </section>
+
+  <section id="feedback" class="band">
+    <div class="wrap sec">
+      <h2>Feedback &amp; progress</h2>
+      <div class="grid two-col">
+        <form id="fbForm" class="card" novalidate>
+          <h3>Rate a completed session</h3>
+          <label>Session<select id="fbSession"></select></label>
+          <fieldset class="stars-set">
+            <legend>Your rating</legend>
+            <div class="stars" id="stars"></div>
+          </fieldset>
+          <span id="fbErr" class="err" role="alert"></span>
+          <label>Comment (optional)<textarea id="fbText" rows="3" maxlength="300"></textarea></label>
+          <button class="btn">Save feedback</button>
+          <p id="fbMsg" class="ok" role="status"></p>
+        </form>
+        <div class="card">
+          <h3>Your progress</h3>
+          <p class="prog muted"></p>
+          <progress class="bar2" max="100" value="0" aria-label="Action item progress"></progress>
+          <p>Add, complete or remove action items in your <a href="#dashboard">dashboard</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="#mentors">Find a Mentor</a><a href="#how">How It Works</a><a href="#resources">Career Resources</a><a href="#events">Events</a></nav>
+    <p>Every career starts with one good conversation. We are glad you are here.</p>
+    <p class="muted2">Demo notice: Campus Connect is a frontend demo. Mentors, bookings, logins and registrations are simulated.</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle"><div class="in"><button class="x" id="dlgX" aria-label="Close dialog">×</button><div id="dlgBody"></div></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
